@@ -1,0 +1,15 @@
+Vagrant.configure("2") do |config|
+
+  config.vm.box = "jasonc/centos7"
+  
+  config.vm.define "vmtest1" do |vmtest1|
+    config.vm.hostname = "vmtest1"
+    config.vm.network "private_network", ip: "10.9.8.5"
+  end
+
+  config.vm.define "vmtest2" do |vmtest2|
+    config.vm.hostname = "vmtest2"
+    config.vm.network "private_network", ip: "10.9.8.6"
+  end
+  
+end
